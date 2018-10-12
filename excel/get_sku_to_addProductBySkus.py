@@ -10,14 +10,14 @@ def get_skus():
     # workbook = xlrd.open_workbook(r'F:\Work\Document\选品\UP选品\数码、电脑办公.xlsx')
     # workbook = xlrd.open_workbook(r'F:\Work\Document\选品\UP选品\钟表、珠宝.xlsx')
     # workbook = xlrd.open_workbook(r'F:\Work\Document\选品\UP选品\钟表、珠宝.xlsx')
-    workbook = xlrd.open_workbook(r'F:\Work\Document\选品\阿噗第一次选品.xlsx')
+    workbook = xlrd.open_workbook(r'F:\Work\Doc\选品\阿噗科技选品0723.xlsx')
     # 获取所有sheet
-    sheet = workbook.sheet_by_index(2)
+    sheet = workbook.sheet_by_index(0)
     cols_0_list = sheet.col_values(0)
     skus = ""
     for i in range(1, len(cols_0_list)):
         # skus = skus + "," + cols_0_list[i]
-        skus = skus + "," + cols_0_list[i]
+        skus = skus + ",\"" + cols_0_list[i] + "\""
     print(skus[1:])
 
 
