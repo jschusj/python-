@@ -6,8 +6,8 @@ def get_skus_from_txt():
     for line in lines:
         line = line.strip('\n')
         # skus = skus + "," + "\"" + line + "\""
-        # skus = skus + ","  + line
-        skus = skus + "categoryName:" + line + " OR "
+        skus = skus + ","  + line
+        # skus = skus + "\"" + line + "\","
     # print(skus[1:])
     print(skus[0:])
 
